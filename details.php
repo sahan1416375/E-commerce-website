@@ -67,9 +67,41 @@ include("functions/functions.php");
 
                     <div id="products_box">
                         <?php
-                            getPro();
-                        ?>
-                    </div>
+                       if(isset($_GET['pro_id']))
+                       {
+
+                        $product_id=$_GET['pro_id'];
+                        $get_pro="Select * from products where product_id= $product_id";
+
+                         $run_pro=mysqli_query($con, $get_pro);
+
+                         while($row_pro=mysqli_fetch_array($run_pro))
+                         {
+                        $pro_id=$row_pro['product_id'];
+                        $pro_title=$row_pro['product_title'];
+                        $pro_price=$row_pro['product_price'];
+                        $pro_image=$row_pro['product_image'];
+                        $pro_desc=$row_pro['product_desc'];
+            
+                       echo "
+                       <div id='single_product'>
+
+                
+                      <h3>$pro_title</h3>
+                        <img src='admin_area/images/$pro_image' width='400' height='300'/>
+                        <h4>Rs.$pro_price.00</h4>
+                         <a href='index.php' style='float:left;'>Go Back</a>
+                         <a href='index.php'><button style='float:right'>Add to cart</button></a>
+
+        </div>
+        ";
+
+        
+    }
+}
+
+?>
+              </div>
             </div>
         </div>
         <!-- Content ends-->
