@@ -9,6 +9,7 @@ include("functions/functions.php");
 </head>
 
 <body>
+    <form action="details.php" method="get">
 	<!-- Main container starts-->
     <div class="main_wrapper">
 
@@ -66,7 +67,11 @@ include("functions/functions.php");
                     </div>
 
                     <div id="products_box">
+                     <h1>welcome to Details page</h1>       
                         <?php
+                      global $con;
+                      global $pro_id;
+
                        if(isset($_GET['pro_id']))
                        {
 
@@ -82,8 +87,10 @@ include("functions/functions.php");
                         $pro_price=$row_pro['product_price'];
                         $pro_image=$row_pro['product_image'];
                         $pro_desc=$row_pro['product_desc'];
+
+                        echo "Complete";
             
-                       echo "
+                      echo "
                        <div id='single_product'>
 
                 
@@ -100,7 +107,8 @@ include("functions/functions.php");
     }
 }
 
-?>
+?>              
+
               </div>
             </div>
         </div>
@@ -116,5 +124,7 @@ include("functions/functions.php");
 
     </div>
     <!-- Main container ends-->
+</form>
 </body>
+
 </html>

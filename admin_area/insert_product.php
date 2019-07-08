@@ -14,7 +14,7 @@ include("includes/db.php");
 	</script>
 </head>
 <body bgcolor="skyblue">
-	<form action="insert_product.php" method="post" enctype="multipart/form-data">
+	<form action="insert_product.php" method="post/get" enctype="multipart/form-data">
 	<table align="center" border="2" width="600px"bgcolor="orange">
 		<tr align="center">
 			<td colspan="6"><h1>Insert new post here</h1></td>
