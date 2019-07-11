@@ -50,7 +50,7 @@ function getPro(){
 			   <h3>$pro_title</h3>
 			   <img src='admin_area/images/$pro_image' width='180px' height='180px'/>
 			   <h4>Rs.$pro_price.00</h4>
-			   <a href='details.php' style='float:left;' name='submit'>Details</a>
+			   <a href='details.php?pro_id=".$pro_id."' style='float:left;' name='submit'>Details</a>
 			   <a href='index.php'><button style='float:right'>Add to cart</button></a>
 
 		</div>
@@ -90,6 +90,7 @@ function getPro2(){
 		";
 	}
 
+}
 }
 
 ?>

@@ -69,8 +69,7 @@ include("functions/functions.php");
                     <div id="products_box">
                      <h1>welcome to Details page</h1>       
                         <?php
-                      global $con;
-                      global $pro_id;
+                         global $con;
 
                        if(isset($_GET['pro_id']))
                        {
@@ -88,7 +87,6 @@ include("functions/functions.php");
                         $pro_image=$row_pro['product_image'];
                         $pro_desc=$row_pro['product_desc'];
 
-                        echo "Complete";
             
                       echo "
                        <div id='single_product'>
@@ -96,6 +94,7 @@ include("functions/functions.php");
                 
                       <h3>$pro_title</h3>
                         <img src='admin_area/images/$pro_image' width='400' height='300'/>
+                        <p>$pro_desc</p>
                         <h4>Rs.$pro_price.00</h4>
                          <a href='index.php' style='float:left;'>Go Back</a>
                          <a href='index.php'><button style='float:right'>Add to cart</button></a>
@@ -107,7 +106,7 @@ include("functions/functions.php");
     }
 }
 
-?>              
+                        ?>              
 
               </div>
             </div>
